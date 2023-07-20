@@ -29,7 +29,9 @@ def salesforce_table_selectedColumns(username, password, token_number, table_nam
     Returns:
         pandas.DataFrame: DataFrame containing the queried data.
     """
+````
 ### `salesforce_table`
+```python
 def salesforce_table(table_name, username, password, token_number, where_arg=None):
     """
     Fetch data from Salesforce table for all columns.
@@ -44,14 +46,17 @@ def salesforce_table(table_name, username, password, token_number, where_arg=Non
     Returns:
         pandas.DataFrame: DataFrame containing the queried data.
     """
+````
 # Usage
 To use the Salesforce utility module, follow these steps:
 
 1. Import the module in your Python script:
-
-
+```python
 from salesforce_utils import salesforce_table_selectedColumns, salesforce_table
-# Example 1: Fetch data from 'Resource_Assignment__c' table with specific columns
+```
+1. Call the functions with appropriate parameters:
+```python
+# Example 1: Fetch data from 'Opportunity' table with specific columns
 username = "your_salesforce_username"
 password = "your_salesforce_password"
 security_token = "your_salesforce_security_token"
@@ -68,7 +73,8 @@ table_name = "Account"
 where_clause = "WHERE Industry = 'Technology'"
 data = salesforce_table(table_name, username, password, security_token, where_arg=where_clause)
 print(data)
-Remember to replace your_salesforce_username, your_salesforce_password, and your_salesforce_security_token with your actual Salesforce credentials.
+```
+Remember to replace `your_salesforce_username`, `your_salesforce_password, and `your_salesforce_security_token` with your actual Salesforce credentials.
 
 # Contributing
 If you have suggestions, bug reports, or would like to contribute to this project, feel free to open an issue or create a pull request.
